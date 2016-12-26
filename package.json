@@ -1,0 +1,27 @@
+{
+  "name": "tracker",
+  "version": "1.0.0",
+  "description": "Publish Interface for Amazon SNS",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --presets babel-preset-es2015 --out-dir dist",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tutorama/tracker.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Tutorama/tracker/issues"
+  },
+  "homepage": "https://github.com/Tutorama/tracker#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.7.19"
+  }
+}
