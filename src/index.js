@@ -1,6 +1,6 @@
 import aws from 'aws-sdk';
-import { awsSNS } from 'config';
-import { topics } from 'topics';
+import { awsSNS } from './config';
+import { topics } from './topics';
 
 export const Topics = topics;
 
