@@ -6,7 +6,7 @@ export class SNS {
   }
   publish(params){
     return new Promise((reject, resolve) => {
-      sns.publish(params, function(err, data){
+      this.sns.publish(params, function(err, data){
         if (err) return reject(err);
         return resolve(data);
       })
