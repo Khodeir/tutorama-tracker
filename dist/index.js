@@ -24,11 +24,14 @@ var SNS = exports.SNS = function () {
 
   _createClass(SNS, [{
     key: 'publish',
-    value: function publish(params) {
+    value: function publish(message, topicARN) {
       var _this = this;
 
       return new Promise(function (reject, resolve) {
-        _this.sns.publish(params, function (err, data) {
+        _this.sns.publish({
+          Message: message,
+          TopicArn: topicARN
+        }, function (err, data) {
           if (err) return reject(err);
           return resolve(data);
         });
