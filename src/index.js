@@ -4,9 +4,12 @@ export class SNS {
   constructor(config){
     this.sns = new aws.SNS(config);
   }
-  publish(params){
+  publish(message, topicARN){
     return new Promise((reject, resolve) => {
-      this.sns.publish(params, function(err, data){
+      this.sns.publish({
+        Message: message,
+        TopicArn: topicARN
+      }, function(err, data){
         if (err) return reject(err);
         return resolve(data);
       })
