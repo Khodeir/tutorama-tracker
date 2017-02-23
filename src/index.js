@@ -1,8 +1,8 @@
-import aws from 'aws-sdk';
+import SNSClient from 'aws-sdk/clients/SNS';
 
 export class SNS {
   constructor(config){
-    this.sns = new aws.SNS(config);
+    this.sns = new SNSClient(config);
   }
   publish(message, topicARN){
     return new Promise((reject, resolve) => {
