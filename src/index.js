@@ -1,4 +1,4 @@
-import SNSClient from 'aws-sdk/clients/SNS';
+import SNSClient from 'aws-sdk/clients/sns';
 
 export class SNS {
   constructor(config){

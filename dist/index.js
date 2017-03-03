@@ -7,9 +7,9 @@ exports.SNS = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _SNS = require('aws-sdk/clients/SNS');
+var _sns = require('aws-sdk/clients/sns');
 
-var _SNS2 = _interopRequireDefault(_SNS);
+var _sns2 = _interopRequireDefault(_sns);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19,7 +19,7 @@ var SNS = exports.SNS = function () {
   function SNS(config) {
     _classCallCheck(this, SNS);
 
-    this.sns = new _SNS2.default(config);
+    this.sns = new _sns2.default(config);
   }
 
   _createClass(SNS, [{
